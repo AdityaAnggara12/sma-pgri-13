@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontak | SMA PGRI 13 Tanjung Redeb</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #0a4d8c;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header-container img {
+            width: 80px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #083a66;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative; /* WAJIB */
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #0a4d8c;
+            font-weight: bold;
+        }
+
+        /* DROPDOWN */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #083a66;
+            min-width: 220px;
+            z-index: 9999;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+            padding: 12px 15px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #0a4d8c;
+        }
+
+        /* CONTENT */
+        .container {
+            background: white;
+            margin: 25px;
+            padding: 25px;
+            border-radius: 6px;
+        }
+
+        h2 {
+            color: #0a4d8c;
+            margin-bottom: 20px;
+        }
+
+        .kontak-item {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .kontak-item strong {
+            display: inline-block;
+            width: 130px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #083a66;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <img src="logo-pgri.png" alt="Logo PGRI">
+        <div>
+            <h1>SMA PGRI 13 TANJUNG REDEB</h1>
+            <p>Mewujudkan Generasi Cerdas, Berkarakter, dan Berprestasi</p>
+        </div>
+    </div>
+</header>
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="index.html">Beranda</a></li>
+
+        <li>
+            <a href="#">Profil Sekolah</a>
+            <ul>
+                <li><a href="sejarah.html">Sejarah</a></li>
+                <li><a href="visi-misi.html">Visi & Misi</a></li>
+                <li><a href="struktur-organisasi.html">Struktur Organisasi</a></li>
+                <li><a href="lokasi.html">Lokasi Sekolah</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">Kesiswaan</a>
+            <ul>
+                <li><a href="osis.html">OSIS</a></li>
+                <li><a href="ekstrakurikuler.html">Ekstrakurikuler</a></li>
+            </ul>
+        </li>
+
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+    </ul>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+    <h2>Kontak SMA PGRI 13 Tanjung Redeb</h2>
+
+    <div class="kontak-item">
+        <strong>Alamat:</strong>
+        Jl. DR. Murjani 2, Karang Ambun,  
+        Kec. Tanjung Redeb, Kab. Berau, Kalimantan Timur
+    </div>
+
+    <div class="kontak-item">
+        <strong>Telepon:</strong> -
+    </div>
+
+    <div class="kontak-item">
+        <strong>Fax / HP:</strong> 085249704177
+    </div>
+
+    <div class="kontak-item">
+        <strong>Email:</strong>
+        <a href="mailto:Smapgri284@yahoo.co.id">
+            Smapgri284@yahoo.co.id
+        </a>
+    </div>
+
+    <div class="kontak-item">
+        <strong>Website:</strong>
+        <a href="http://www.Smapgri.sch.id" target="_blank">
+            www.Smapgri.sch.id
+        </a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SMA PGRI 13 Tanjung Redeb | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
