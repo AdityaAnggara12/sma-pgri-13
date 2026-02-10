@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Berita Sekolah | SMA PGRI 13 Tanjung Redeb</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0a4d8c;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header-container img {
+            width: 80px;
+        }
+
+        nav {
+            background-color: #083a66;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #0a4d8c;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* ===== BERITA ===== */
+        .berita {
+            display: flex;
+            gap: 20px;
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .berita img {
+            width: 35%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .berita-content {
+            padding: 20px;
+        }
+
+        .berita-content h3 {
+            color: #0a4d8c;
+            margin-top: 0;
+        }
+
+        .tanggal {
+            font-size: 13px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #083a66;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        /* ===== RESPONSIVE HP ===== */
+        @media (max-width: 768px) {
+            .berita {
+                flex-direction: column;
+            }
+
+            .berita img {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="logo-pgri.png" alt="Logo PGRI">
+        <div>
+            <h1>SMA PGRI 13 TANJUNG REDEB</h1>
+            <p>Mewujudkan Generasi Cerdas, Berkarakter, dan Berprestasi</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Beranda</a></li>
+</nav>
+
+<div class="container">
+
+    <!-- BERITA 1 -->
+    <div class="berita">
+        <img src="img/berita1.jpg" alt="Kegiatan Sekolah">
+        <div class="berita-content">
+            <h3>Sosialisasi Kejaksaan Di SMA PGRI 13 Tanjung Redeb</h3>
+            <div class="tanggal">5 Februari 2026</div>
+            <p>
+                Kejaksaan melakukan kegiatan untuk penyalahgunaan narkoba
+                dikalangan pelajar di SMA PGRI 13 Tanjung Redeb.
+                Kegiatan ini bertujuan meningkatkan kesadaran siswa
+                tentang bahaya narkoba serta edukasi hukum di Indonesia.
+            </p>
+        </div>
+    </div>
+
+    <!-- BERITA 2 -->
+    <div class="berita">
+        <img src="img/berita2.jpg" alt="Prestasi Siswa">
+        <div class="berita-content">
+            <h3>Pembukaan Lomba Dengan Tarian Dari Berbagai Suku Budaya</h3>
+            <div class="tanggal">27 Agustus 2025</div>
+            <p>
+                Kegiatan ini sebagai bentuk apresiasi terhadap keberagaman
+                budaya di Indonesia. Siswa-siswi menampilkan tarian tradisional
+                dari berbagai daerah dengan penuh kreativitas.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 SMA PGRI 13 Tanjung Redeb | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
