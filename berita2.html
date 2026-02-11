@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Berita Sekolah | SMA PGRI 13 Tanjung Redeb</title>
+    <title>Pembukaan Lomba | SMA PGRI 13</title>
 
     <style>
         body {
@@ -15,6 +15,7 @@
             background-color: #0a4d8c;
             color: white;
             padding: 20px;
+            text-align: center;
         }
 
         nav {
@@ -40,35 +41,39 @@
         }
 
         .container {
-            padding: 25px;
-        }
-
-        .berita {
+            max-width: 900px;
+            margin: 30px auto;
             background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .berita h3 {
+        .container img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        h2 {
             color: #0a4d8c;
         }
 
         .tanggal {
-            font-size: 13px;
             color: gray;
-            margin-bottom: 10px;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
 
         .btn {
             display: inline-block;
-            padding: 8px 15px;
+            padding: 10px 18px;
             background-color: #0a4d8c;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
-            margin-top: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
         }
 
         .btn:hover {
@@ -80,7 +85,7 @@
             color: white;
             text-align: center;
             padding: 15px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -88,36 +93,45 @@
 <body>
 
 <header>
-    <h1 style="text-align:center;">SMA PGRI 13 TANJUNG REDEB</h1>
+    <h1>SMA PGRI 13 TANJUNG REDEB</h1>
 </header>
 
 <nav>
     <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="berita.html">Berita</a></li>
+        <li><a href="lokasi.html">Lokasi Sekolah</a></li>
         <li><a href="kontak.html">Kontak</a></li>
     </ul>
 </nav>
 
 <div class="container">
 
-    <div class="berita">
-        <h3>Sosialisasi Kejaksaan di SMA PGRI 13</h3>
-        <div class="tanggal">5 Februari 2026</div>
-        <p>
-            Kejaksaan memberikan edukasi tentang bahaya narkoba kepada siswa...
-        </p>
-        <a href="berita1.html" class="btn">Lihat Lebih Lanjut</a>
-    </div>
+    <h2>Pembukaan Lomba Dengan Tarian Dari Berbagai Suku Budaya</h2>
+    <div class="tanggal">27 Agustus 2025</div>
 
-    <div class="berita">
-        <h3>Pembukaan Lomba Dengan Tarian Budaya</h3>
-        <div class="tanggal">27 Agustus 2025</div>
-        <p>
-            Siswa menampilkan tarian tradisional dari berbagai daerah...
-        </p>
-        <a href="berita2.html" class="btn">Lihat Lebih Lanjut</a>
-    </div>
+    <img src="img/berita2.jpg" alt="Pembukaan Lomba">
+
+    <p>
+        Kegiatan ini diadakan sebagai bentuk apresiasi terhadap keberagaman budaya di Indonesia.
+        Siswa-siswi SMA PGRI 13 Tanjung Redeb menampilkan berbagai tarian tradisional
+        dari berbagai daerah.
+    </p>
+
+    <p>
+        Acara ini bertujuan untuk menumbuhkan rasa cinta tanah air,
+        mempererat persatuan, serta mengembangkan kreativitas peserta didik
+        dalam bidang seni dan budaya.
+    </p>
+
+    <!-- Tombol Link -->
+    <a href="https://www.instagram.com/smapgri13tgredeb?igsh=dm45MWdyMGp4NTh2" target="_blank" class="btn">
+        Klik Untuk Membuka Info Lebih Lanjut Di Instagram SMA PGRI 13 Tanjung Redeb
+    </a>
+
+    <br><br>
+
+    <a href="berita.html" class="btn">← Kembali ke Berita</a>
 
 </div>
 
