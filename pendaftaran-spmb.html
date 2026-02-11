@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran SPMB - SMA PGRI 13 Tanjung Redeb</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0a4d8c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        h1, p {
+            margin: 5px;
+        }
+
+        /* TAB MENU */
+        .tab {
+            overflow: hidden;
+            background-color: #083a66;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #0a4d8c;
+        }
+
+        .tab button.active {
+            background-color: #0a4d8c;
+        }
+
+        /* TAB CONTENT */
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 5px;
+        }
+
+        .tabcontent h2 {
+            color: #0a4d8c;
+        }
+
+        footer {
+            background-color: #0663f0;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* FORM STYLING */
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #0a4d8c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #083a66;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="img/logo-pgri.png" alt="Logo PGRI">
+    <h1>Pendaftaran SPMB</h1>
+    <p>SMA PGRI 13 Tanjung Redeb</p>
+</header>
+
+<!-- Link Kembali ke Beranda -->
+<div style="margin: 20px;">
+    <a href="index.html" style="text-decoration: none; color: #0a4d8c; font-weight: bold;">
+        &larr; Kembali ke Beranda
+    </a>
+</div>
+
+<!-- TAB MENU -->
+<div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'Formulir')">Formulir Pendaftaran</button>
+    <button class="tablinks" onclick="openTab(event, 'Jadwal')">Jadwal Pendaftaran</button>
+    <button class="tablinks" onclick="openTab(event, 'Persyaratan')">Persyaratan</button>
+</div>
+
+<!-- TAB CONTENT -->
+<div id="Formulir" class="tabcontent" style="display: block;">
+    <h2>Formulir Pendaftaran SPMB</h2>
+    <form action="#" method="post">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="nisn">NISN:</label>
+        <input type="text" id="nisn" name="nisn" required>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+        <label for="jenjang">Jenjang Pendidikan Saat Ini:</label>
+        <select id="jenjang" name="jenjang" required>
+            <option value="">--Pilih--</option>
+            <option value="smp">SMP</option>
+            <option value="mts">MTs</option>
+            <option value="lainnya">Lainnya</option>
+        </select>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <input type="submit" value="Kirim Pendaftaran">
+    </form>
+</div>
+
+<div id="Jadwal" class="tabcontent">
+    <h2>Jadwal Pendaftaran SPMB</h2>
+    <ul>
+        <li>Pendaftaran Online: 1 Maret - 30 Juni 2026</li>
+        <li>Seleksi Administrasi: 1 Juli - 10 Juli 2026</li>
+        <li>Pengumuman Hasil: 15 Juli 2026</li>
+        <li>Daftar Ulang: 16 Juli - 20 Juli 2026</li>
+    </ul>
+</div>
+
+<div id="Persyaratan" class="tabcontent">
+    <h2>Persyaratan Pendaftaran SPMB</h2>
+    <ol>
+        <li>Fotokopi Ijazah/Surat Keterangan Lulus SMP/MTs.</li>
+        <li>Fotokopi Akta Kelahiran.</li>
+        <li>Pas Foto 3x4 terbaru (2 lembar).</li>
+        <li>Formulir Pendaftaran yang telah diisi lengkap.</li>
+        <li>Surat Rekomendasi (jika ada).</li>
+    </ol>
+</div>
+
+<footer>
+    <p>&copy; 2026 SMA PGRI 13 Tanjung Redeb. Semua Hak Dilindungi.</p>
+</footer>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for(i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for(i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
