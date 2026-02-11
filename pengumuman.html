@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pengumuman | SMA PGRI 13</title>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0a4d8c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .pengumuman-box {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .pengumuman-box h3 {
+      margin-top: 0;
+      color: #0a4d8c;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Pengumuman Sekolah</h2>
+</header>
+
+<div class="container">
+  <div id="data"></div>
+</div>
+  
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot } 
+  from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCOQxYCgicDhea6hQdvI3eBRMaqusmGO6M",
+    authDomain: "sma-pgri-13.firebaseapp.com",
+    projectId: "sma-pgri-13",
+    storageBucket: "sma-pgri-13.firebasestorage.app",
+    messagingSenderId: "370847225655",
+    appId: "1:370847225655:web:e5ca658d114206a3e92cb2"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Ambil data realtime
+  const q = query(collection(db, "pengumuman"), orderBy("tanggal", "desc"));
+
+  onSnapshot(q, (snapshot) => {
+    let content = "";
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      content += `
+        <div class="pengumuman-box">
+          <h3>${data.judul}</h3>
+          <p>${data.isi}</p>
+        </div>
+      `;
+    });
+
+    document.getElementById("data").innerHTML = content;
+  });
+</script>
+
+
+</body>
+</html>
